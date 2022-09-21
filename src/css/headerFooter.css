@@ -266,7 +266,7 @@ transition: ease-in 1s , ;
     font-size: 30px;
   }
   .text-banner{
-    color:#828282;
+    color:#828282 !important;
     font-family: Raleway-Regular ;
     line-height: 1.4;
     width: 100%;
