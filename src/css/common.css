@@ -314,7 +314,7 @@ font-size: var(--font-size-10);
     src: url(../../src/fonts/raleway/Raleway-Thin.ttf);
   }
   /* Loadin GIF  */
-  #Loading{
+  /* #Loading{
     position: fixed;
      width: 100%;
     height: 100%;
@@ -324,16 +324,10 @@ font-size: var(--font-size-10);
     z-index: 99999 ;
     background-size: cover;
     
-  }
- /* Preloader
+  } */
+/*=========
+Preloader
 =========*/
-.page-wrapper{
-	position:relative;
-	margin:0 auto;
-	width:100%;
-	min-width:300px;
-	overflow: hidden;
-}
 #loader-wrapper {
 	position: fixed;
 	top: 0;
@@ -369,12 +363,14 @@ font-size: var(--font-size-10);
 	-webkit-transform: translateX(-100%);
 			transform: translateX(-100%);
 	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: var(--primary-color1);
 }
   
 .loaded #loader-wrapper .loader-section.section-right {
 	-webkit-transform: translateX(100%);
 			transform: translateX(100%);
 	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: var(--accent-color);
 }
   
 .loaded #loader {
@@ -389,7 +385,7 @@ font-size: var(--font-size-10);
 	transition: all 0.3s 1s ease-out;
 }
 #loader  {
-	animation: rotate 1s ease-in;  
+	animation: rotate 1s infinite;  
 	height: 50px;
 	width: 50px;
 	z-index: 2000;
@@ -407,45 +403,48 @@ font-size: var(--font-size-10);
 	width: 20px;
 }
 #loader:before {
-	animation: ball1 1s infinite;  
-	background-color: #c42972;
+	animation: ball1 3s infinite;  
+	background-color: var(--accent-color);
 	box-shadow: 30px 0 0 #bc2975;
 	margin-bottom: 10px;
 }
 #loader:after {
-	animation: ball2 1s infinite; 
-	background-color: #fb375c;
+	animation: ball2 3s infinite; 
+	background-color: var(--primary-color1);
 	box-shadow: 30px 0 0 #fb6a4a;
 }
   
 @keyframes rotate {
 	0% { 
-	  -webkit-transform: rotate(0deg) scale(0.8); 
-	  -moz-transform: rotate(0deg) scale(0.8);
+	  -webkit-transform: rotate(1800deg) scale(0.8); 
+	  -moz-transform: rotate(180deg) scale(0.8);
 	}
 	50% { 
-	  -webkit-transform: rotate(360deg) scale(1.2); 
-	  -moz-transform: rotate(360deg) scale(1.2);
+	  -webkit-transform: rotate(180deg) scale(1.2); 
+	  -moz-transform: rotate(180deg) scale(1.2);
 	}
 	100% { 
-	  -webkit-transform: rotate(720deg) scale(0.8); 
-	  -moz-transform: rotate(720deg) scale(0.8);
+	  -webkit-transform: rotate(180deg) scale(0.8); 
+	  -moz-transform: rotate(180deg) scale(0.8);
 	}
 }
   
 @keyframes ball1 {
 	0% {
 	  box-shadow: 30px 0 0 #f8b334;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	50% {
 	  box-shadow: 0 0 0 #f8b334;
 	  margin-bottom: 0;
 	  -webkit-transform: translate(15px,15px);
 	  -moz-transform: translate(15px, 15px);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	100% {
 	  box-shadow: 30px 0 0 #f8b334;
 	  margin-bottom: 10px;
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
 	}
 }
   
@@ -464,8 +463,18 @@ font-size: var(--font-size-10);
 	  margin-top: 0;
 	}
 }
-  
-  /* END */
+/*#Loader{
+    position:fixed; 
+    left:0px; 
+    top:0px; 
+    width:100%; 
+    height:100%; 
+    z-index:999999; 
+    background-color:#ffffff; 
+    background-position:center center; 
+    background-repeat:no-repeat;
+    background-image:url(../../src/image//load.gif.gif);   
+} */
 
 
   /* Button scroll up */
