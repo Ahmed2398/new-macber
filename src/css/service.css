@@ -1,5 +1,9 @@
 @import url(./common.css);
-
+/* section software */
+.software .h3-banner{
+  color: var(--primary-color2) !important;
+}
+/* End */
 .head-bannergame{
     background-image: url('../../src/image/game-dev.svg');
     background-position: center;
@@ -19,14 +23,17 @@
   font-size: 22px;
   text-transform: uppercase;
 }
- .head-brief{
+ .projects .head-brief{
   color: var(--primary-color1);
   text-transform: capitalize;
+  text-align: left;
+  font-weight: 800 !important;
+  font-size: 50px;
  
 }
 .Spereator {
   border: 2px solid ;
-  width: 25%;
+  width: 40%;
   text-align: center !important;
   height: 7px !important;
   /* background-color: var(--accent-color); */
@@ -76,7 +83,7 @@ animation: shake 150ms 2 linear;
   display: block !important;
 }
 .nav-tablinks{
-  background-color: var(--primary-color1);
+  background-color: transparent;
   width: 100%;
   height: auto;
   padding: 5px 5px;
@@ -85,11 +92,13 @@ animation: shake 150ms 2 linear;
 
 }
 .tablink {
-  background-color: var(--primary-color1);
-  color: white;
+  background-color: transparent;
+  color: var(--primary-color2);
   padding: 15px 0;
   margin: 6px;
   border: none;
+  font-weight: 700;
+font-size: 25px;
 }
 
 .tablink:hover {
@@ -107,3 +116,69 @@ animation: shake 150ms 2 linear;
 }
 
 #Ar {background-color: #fff;}
+
+
+
+.office-address {
+  height: 350px !important;
+  position: relative;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.office-address:hover{
+  transform: scale(1.1);
+}
+
+.office-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(296.7deg, #45108A -5.17%, #3D0661 42.59%, #3D065F 42.6%, #200554 168.23%)));
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.45));
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.office-content:hover{
+  background: linear-gradient(296.7deg, #45108A -5.17%, #3D0661 42.59%, #3D065F 42.6%, #200554 168.23%);
+opacity: 0.9;
+}
+.office-overlay {
+  opacity: 0;
+  background-color: rgba(296.7deg, #45108A -5.17%, #3D0661 42.59%, #3D065F 42.6%, #200554 168.23%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  z-index: -1;
+}
+
+.office-content .office-info .project-name{
+  color: #fff;
+  visibility: hidden;
+  position: absolute;
+  top: 150px;
+  left: 75px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.office-content:hover .office-info  .project-name {
+  color: #fff;
+  visibility: visible !important;
+  transform: scale(1.1) ;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  cursor: pointer;
+  z-index: 9999;
+}
