@@ -213,13 +213,10 @@
 .navbar{
   background-color: #fff !important;
 }
-  .navbar-nav .nav-link {
-    font-family: Raleway-Regular !important;
-    font-weight: 200 !important;
-    font-size: 15px !important;
-
-  }
+ 
   .navbar .nav-link{
+    font-family: Raleway-Regular !important;
+
     padding: 0.85rem 1rem;
     font-size: 18px;
     font-weight: 400;
