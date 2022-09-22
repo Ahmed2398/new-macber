@@ -130,7 +130,7 @@
       top: 50px;
       left: 10px;
     }
-    #myBtn{
+    #myBtn .fa-arrow-up{
       position: relative;
       right: 5px;
     }
