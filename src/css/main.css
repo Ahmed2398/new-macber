@@ -788,3 +788,8 @@ position: relative;
   position: relative;
   /* width: 350px; */
 }
+.box-work h4{
+  color: var(--primary-color1) !important;
+  padding: 20px 10px;
+
+}

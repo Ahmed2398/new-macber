@@ -36,7 +36,7 @@
       width: 60% !important;
     }
     .navbar-toggler{
-      width: 22%;
+    
       border: none;
       text-align: inherit;
     }
@@ -76,9 +76,10 @@
     .why-choose-us {
       background-image: none;
       background-color: rgb(129, 122, 122) !important;
+      height: 70vh;
     }
     .box-mis{
-     
+     width: auto;
       padding: 0;
       left: 0;
     }

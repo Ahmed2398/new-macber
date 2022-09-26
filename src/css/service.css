@@ -173,7 +173,7 @@ opacity: 0.9;
   visibility: hidden;
   position: absolute;
   top: 150px;
-  left: 75px;
+  /* left: 75px; */
   font-size: 30px;
   text-transform: capitalize;
 }
