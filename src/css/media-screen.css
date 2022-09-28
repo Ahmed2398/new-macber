@@ -76,18 +76,21 @@
     .why-choose-us {
       background-image: none;
       background-color: rgb(129, 122, 122) !important;
-      height: 70vh;
+      /* height: 70vh; */
     }
     .box-mis{
      width: auto;
       padding: 0;
       left: 0;
+      height: 550px;
     }
     .box-mis h1{
-      margin-top: 12px;
+      margin-top: 0;
+    font-size: 20px;
     }
     .box-mis p{
       margin-bottom: 12px;
+      font-size: 14px;
     }
     .icon-content{
       margin-top: 10px;
