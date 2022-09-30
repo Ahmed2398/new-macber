@@ -91,13 +91,10 @@
   background: transparent;
   box-shadow: 0px 0px 13px #ded6e8;
   border-radius: 5px;
-  /* position: relative; */
   width: 500px;
   height: 534px;
   padding: 2rem 0;
-  /* margin-top: 5rem; */
-  /* left: 40px; */
-  /* top: 20px; */
+  
   border: 23px solid yellow;
 }
 .box-vis{
