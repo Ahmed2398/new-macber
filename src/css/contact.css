@@ -4,11 +4,11 @@
 }
 .navbar .nav-link{
   text-transform: uppercase;
-  padding: 0.85rem 1rem;
-  /* font-size: 18px; */
+  padding: 0.85rem 2rem;
   font-weight: 400;
   position: relative;
   color: var(--primary-color1) !important;
+  font-size: 12px !important;
  
 }
 .navbar .active .nav-link {

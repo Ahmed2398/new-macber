@@ -30,9 +30,9 @@
   color: var(--primary-color1);
   text-transform: capitalize;
   text-align: left;
-  font-weight: 800 !important;
+  font-weight: 400 !important;
   font-size: 50px;
- 
+ font-family: Raleway-Mediuam;
 }
 .Spereator {
   border: 2px solid ;
@@ -100,8 +100,9 @@ animation: shake 150ms 2 linear;
   padding: 15px 0;
   margin: 6px;
   border: none;
-  font-weight: 700;
-font-size: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family:Raleway-Regular ;
 }
 
 .tablink:hover {
@@ -172,10 +173,11 @@ opacity: 0.9;
   color: #fff;
   visibility: hidden;
   position: absolute;
-  top: 150px;
-  /* left: 75px; */
-  font-size: 30px;
-  text-transform: capitalize;
+    top: 120px;
+    left: 0;
+    font-size: 25px;
+    text-transform: capitalize;
+    position: initial;
 }
 
 .project-content:hover .office-info  .project-name {

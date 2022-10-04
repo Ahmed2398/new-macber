@@ -79,9 +79,7 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
   background-size: cover;
-  /* background-color: #F8F9FA; */
 }
 .why-choose-us .box{
   background-color: #ddc554;
@@ -784,11 +782,16 @@ position: relative;
   position: relative;
   /* width: 350px; */
 }
+.text-box-work{
+  line-height: 1.1;
+  font-size: 13px;
+  text-align: left;
+}
 .box-work h4{
   color: var(--primary-color1) !important;
 
 }
 .work-text {
-  padding: 10px 10px;
+  padding: 40px 10px;
 
 }

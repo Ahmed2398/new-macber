@@ -190,6 +190,9 @@ font-size: var(--font-size-10);
   transform: scale(.8);
   transition: transform 2s;
 }
+.btn-contact:hover{
+  color: #fff;
+}
 .btn-purble {
   color: var(--neutral-color1);
   background-color: var(--primary-color1);
