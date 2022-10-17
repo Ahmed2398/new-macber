@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gwyntt</title>
+    
+    <style>
+    :root {
+    --st-primary-color: #1a754c !important;
+    --st-primary-color-rgb: 26, 117, 76 ;
+    --st-secondary-color-rgb: 0, 65, 36 ;
+    --st-heading-color-rgb: 0, 65, 36 ;
+    --st-body-color-rgb: 85, 90, 88 ;
+    --st-black-color-rgb: 0, 0, 0 ;
+    --st-white-color-rgb: 255, 255, 255 ;
+    --st-primary-font: "Manrope", sans-serif !important ; 
+    --st-primary-font-weight: 400  ;
+    --st-primary-font-size: 18px !important ;
+    --st-primary-textTransform: none ;
+    --e-global-color-primarycolor: #1a754c ;
+    --e-global-color-secondarycolor: #004124 ;
+    --e-global-color-headingcolor: #004124 ;
+    --e-global-color-bodycolor: #555a58 ;
+    --e-global-color-themewhitecolor: #ffffff ; 
+    --e-global-color-themeblackcolor: #000000 ;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+body{
+    font-family: var( --st-primary-font);
+    margin: auto;
+
+}
+        @media all {
+            ul {
+                box-sizing: border-box;
+            }
+        }
+        @media all {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        @media all {
+            h1 {
+                font-size: 2em;
+                margin: 0.67em 0;
+            }
+
+            a {
+                background-color: transparent;
+            }
+
+            img {
+                border-style: none;
+            }
+
+            button {
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0;
+            }
+
+            button {
+                overflow: visible;
+            }
+
+            button {
+                text-transform: none;
+            }
+
+            button {
+                -webkit-appearance: button;
+            }
+
+            button::-moz-focus-inner {
+                border-style: none;
+                padding: 0;
+            }
+
+            button:-moz-focusring {
+                outline: 1px dotted ButtonText;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
+
+            button {
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            h1 {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                clear: both;
+                font-family: var(--st-primary-font);
+                color: var(--st-heading-color);
+                font-weight: 700;
+                line-height: 1.3;
+            }
+
+            h1 {
+                font-size: 2.75rem;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            ul {
+                margin: 0 0 1em 0;
+                padding: 0 0 0 1rem;
+            }
+
+            ul {
+                list-style: disc;
+            }
+
+            img {
+                height: auto;
+                max-width: 100%;
+                vertical-align: top;
+            }
+
+            a {
+                color: var(--st-primary-color);
+                text-decoration: none;
+                transition: all ease-in-out 0.3s;
+            }
+
+            a:visited {
+                color: inherit;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: inherit;
+            }
+
+            a:focus {
+                outline: none;
+            }
+
+            a:hover,
+            a:active {
+                outline: 0;
+            }
+
+            a:hover {
+                color: var(--st-seecondary-color);
+            }
+
+            .container::before,
+            .container::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+            }
+
+            .container:after {
+                clear: both;
+            }
+
+            button {
+                border: 1px solid var(--st-primary-color);
+                border-radius: 0.5rem;
+                background: var(--st-primary-color);
+                color: var(--st-white-color);
+                line-height: 1;
+                font-size: 1rem;
+                padding: 0.625rem 1.5625rem;
+                cursor: pointer;
+                min-height: 3.125rem;
+                display: inline-flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                transition: all ease-in-out 0.35s;
+            }
+
+            button:hover {
+                background: var(--st-secondary-color);
+                border-color: var(--st-secondary-color);
+            }
+
+            button:active,
+            button:focus {
+                border-color: inherit;
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            .custom-logo-link {
+                display: inline-block;
+            }
+
+            .container {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 768px;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                .container {
+                    max-width: 1000px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 1170px;
+                }
+            }
+
+            @media (min-width: 1367px) {
+                .container {
+                    max-width: 1260px;
+                }
+            }
+
+            ul {
+                padding-left: 2em;
+            }
+
+            @media (min-width: 768px) {
+                ul {
+                    padding-left: 2.25em;
+                }
+            }
+
+            ul>li {
+                margin-bottom: 0.75em;
+            }
+
+            ul>li:last-child {
+                margin-bottom: 0;
+            }
+
+            .top-header {
+                background:#004124;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .top-header .container {
+                border-bottom: 1px solid rgba(var(--st-white-color-rgb), 0.1);
+                padding: 1.25rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            @media (max-width: 767.98px) {
+                .top-header .header-left {
+                    flex: 1;
+                }
+            }
+
+            .top-header .header-center {
+                flex: 1;
+            }
+
+            @media (max-width: 767.98px) {
+                .top-header .header-center {
+                    flex: initial;
+                }
+            }
+
+            .top-header .header-right {
+                padding-left: 0.75rem;
+            }
+
+            :root .site-branding {
+                --st-logo-height: 36px;
+                --st-siteTitle-font: "DM Sans", sans-serif;
+                --st-siteTitle-fontSize: 24px;
+            }
+
+            .site-branding .site-title {
+                font-size: var(--st-siteTitle-fontSize);
+                margin: 0;
+                line-height: 1.3;
+                font-family: var(--st-siteTitle-font);
+                font-weight: 700;
+            }
+
+            .site-branding .site-title a {
+                color: var(--st-white-color);
+            }
+
+            .site-branding .site-description {
+                margin: 0;
+                font-size: calc(var(--st-siteTitle-fontSize) - 10px);
+                font-weight: 400;
+                font-family: var(--st-siteTitle-font);
+                letter-spacing: 0;
+                line-height: 1.3;
+                color: rgba(var(--st-white-color-rgb), 0.75);
+            }
+
+            .site-branding .custom-logo-link img {
+                width: auto;
+                height: var(--st-logo-height);
+            }
+
+            .main-navigation {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .main-navigation .toggle-button {
+                width: 3.125rem;
+                height: 3rem;
+                min-height: auto;
+                background: none;
+                border: none;
+                padding: 0;
+                position: relative;
+            }
+
+            @media (min-width: 1025px) {
+                .main-navigation .toggle-button {
+                    display: none;
+                }
+            }
+
+            .main-navigation .toggle-button .toggle-bar {
+                background: var(--st-white-color);
+                width: 2.1875rem;
+                height: 0.1875rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                border-radius: 0.625rem;
+            }
+
+            .main-navigation .toggle-button .toggle-bar:first-child {
+                top: -1.375rem;
+            }
+
+            .main-navigation .toggle-button .toggle-bar:last-child {
+                bottom: -1.375rem;
+            }
+
+            .main-navigation .close {
+                width: 30px;
+                height: 30px;
+                min-height: auto;
+                border-radius: 100%;
+                padding: 0;
+                margin: 30px;
+                display: block;
+                margin-left: auto;
+                position: relative;
+                background: none;
+                border: none;
+            }
+
+            @media (min-width: 1025px) {
+                .main-navigation .close {
+                    display: none;
+                }
+            }
+
+            .main-navigation .close::before,
+            .main-navigation .close::after {
+                content: "";
+                background: rgba(var(--st-black-color-rgb), 0.5);
+                width: 25px;
+                height: 2px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                border-radius: 10px;
+                transform: rotate(45deg);
+            }
+
+            .main-navigation .close::after {
+                transform: rotate(-45deg);
+            }
+
+            .main-navigation .close:hover::before,
+            .main-navigation .close:hover::after {
+                background: var(--st-primary-color);
+            }
+
+            .main-navigation .close .toggle-text {
+                display: none;
+            }
+
+            @media (min-width: 1025px) {
+                .main-navigation .primary-menu-list {
+                    display: block !important;
+                }
+            }
+
+            @media (max-width: 1024.98px) {
+                .main-navigation .primary-menu-list {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    max-width: 21.875rem;
+                    height: 100%;
+                    background: var(--st-white-color);
+                    box-shadow: 0.625rem 0 0.9375rem rgba(var(--st-black-color-rgb), 0.1);
+                    z-index: 999;
+                    overflow: auto;
+                    display: none;
+                }
+
+                .main-navigation .primary-menu-list .mobile-menu {
+                    width: 21.875rem;
+                }
+            }
+
+            @media screen and (max-width: 375px) {
+                .main-navigation .primary-menu-list {
+                    max-width: 320px;
+                }
+
+                .main-navigation .primary-menu-list .mobile-menu {
+                    width: 320px;
+                }
+            }
+
+            .main-navigation ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .main-navigation ul>li {
+                margin: 0;
+                display: block;
+                position: relative;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            @media (min-width: 1025px) {
+                .main-navigation ul>li {
+                    display: inline-block;
+                }
+            }
+
+            @media (min-width: 1025px) {
+
+                .main-navigation ul>li:hover>a,
+                .main-navigation ul>li.current-menu-item>a,
+                .main-navigation ul>li.current_page_item>a {
+                    color: var(#fff);
+                }
+            }
+
+            .main-navigation ul>li>a {
+                display: inline-block;
+                text-decoration: none;
+                color: var(--st-heading-color);
+                padding: 0.875rem 1.5625rem;
+                line-height: 1.5;
+                width: 100%;
+                border-bottom: 1px solid rgba(var(--st-black-color-rgb), 0.05);
+            }
+
+            @media (min-width: 1025px) {
+                .main-navigation ul>li>a {
+                    border-bottom: none;
+                    color: rgba(var(--st-white-color-rgb), 0.8);
+                    width: auto;
+                    padding-left: 0.75rem;
+                    padding-right: 0.75rem;
+                }
+            }
+        }
+
+        
+        :root .site-branding {
+            --st-logo-height: 40px;
+            --st-siteTitle-fontSize: 24px;
+        }
+
+        
+        .site-title,
+        .site-description {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+
+        
+        #menu-item-3786 a {
+            background-color: var(--e-global-color-primarycolor);
+            border-radius: 10px;
+            padding: .25rem 2rem;
+        }
+
+        #menu-item-3785 a {
+            background-color: #fff;
+            border-radius: 10px;
+            color: #333;
+            padding: .25rem 2rem;
+        }
+
+          @media all {
+            a {
+                background-color: transparent;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
+
+            h2 {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                clear: both;
+                font-family: var(--st-primary-font);
+                color: var(--st-heading-color);
+                font-weight: 700;
+                line-height: 1.3;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            a {
+                color: var(--st-primary-color);
+                text-decoration: none;
+                transition: all ease-in-out 0.3s;
+            }
+
+            a:visited {
+                color: inherit;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: inherit;
+            }
+
+            a:focus {
+                outline: none;
+            }
+
+            a:hover,
+            a:active {
+                outline: 0;
+            }
+
+            a:hover {
+                color: var(--st-seecondary-color);
+            }
+
+            .container::before,
+            .container::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+            }
+
+            .container:after {
+                clear: both;
+            }
+
+            .container {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 768px;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                .container {
+                    max-width: 1000px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 1170px;
+                }
+            }
+
+            @media (min-width: 1367px) {
+                .container {
+                    max-width: 1260px;
+                }
+            }
+
+            .btn {
+                display: inline-flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                min-width: 9.1875rem;
+                min-height: 3rem;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            @media (max-width: 767.98px) {
+                .btn {
+                    width: 100%;
+                    margin-top: 0.625rem;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .btn+.btn {
+                    margin-left: 1rem;
+                }
+            }
+
+            .btn svg {
+                margin-left: 0.625rem;
+            }
+
+            .btn.btn-transparent {
+                border: 1px solid var(--st-primary-color);
+                color: var(--st-primary-color);
+            }
+
+            .btn.btn-transparent:hover {
+                background: var(--st-primary-color);
+                color: var(--st-white-color);
+            }
+
+            .btn.btn-fill {
+                background: var(--st-primary-color);
+                border: 1px solid var(--st-primary-color);
+                color: var(--st-white-color);
+            }
+
+            .btn.btn-fill:hover {
+                background: transparent;
+                color: var(--st-primary-color);
+            }
+
+            .footer-cta {
+                background: var(--st-secondary-color);
+                border-bottom: 1px solid rgba(var(--st-white-color-rgb), 0.1);
+                padding: 2.5rem 0;
+            }
+
+            @media (min-width: 768px) {
+                .footer-cta {
+                    padding-top: 5rem;
+                    padding-bottom: 5rem;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .footer-cta .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+            }
+
+            .footer-cta .section-header {
+                margin-bottom: 1.25rem;
+            }
+
+            @media (min-width: 768px) {
+                .footer-cta .section-header {
+                    margin-bottom: 0;
+                    flex: 1;
+                }
+            }
+
+            .footer-cta .section-title {
+                color: var(--st-white-color);
+                margin-top: 0;
+                margin-bottom: 0;
+                font-family: var(--st-primary-font);
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+
+            @media (min-width: 768px) {
+                .footer-cta .section-title {
+                    font-size: 2.5rem;
+                    max-width: 29.125rem;
+                }
+            }
+
+            .footer-cta .section-desc {
+                color: var(--st-white-color);
+                line-height: 1.6;
+                font-size: 1rem;
+            }
+
+            @media (min-width: 768px) {
+                .footer-cta .section-desc {
+                    font-size: 1.25rem;
+                    max-width: 29.125rem;
+                }
+            }
+
+            .footer-cta .section-desc p {
+                margin-bottom: 0;
+            }
+
+            .footer-cta .btn.btn-transparent {
+                border-color: var(--st-white-color);
+                color: var(--st-white-color);
+            }
+
+            .footer-cta .btn.btn-transparent:hover {
+                background: var(--st-white-color);
+                color: var(--st-secondary-color);
+            }
+
+            .footer-cta .btn.btn-fill {
+                box-shadow: 0px 8px 20px rgba(var(--st-primary-color-rgb), 0.25), inset 0px 1px 3px var(--st-primary-color);
+            }
+
+            .footer-cta .btn.btn-fill:hover {
+                border-color: var(--st-white-color);
+                color: var(--st-white-color);
+            }
+        }
+
+        @media all {
+            .wp-block-latest-posts.wp-block-latest-posts__list {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .wp-block-latest-posts.wp-block-latest-posts__list li {
+                clear: both;
+            }
+
+            .wp-block-latest-posts__post-author,
+            .wp-block-latest-posts__post-date {
+                display: block;
+                font-size: .8125em;
+            }
+
+            ul {
+                box-sizing: border-box;
+            }
+
+            .wp-block-tag-cloud a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+
+       
+        @media all {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media all {
+            .wp-block-categories {
+                margin: 0 0 60px 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .wp-block-categories li {
+                display: block;
+                font-size: .8em;
+                line-height: 1.5;
+                font-weight: 400;
+                color: rgba(var(--st-black-color-rgb), .8);
+                margin-bottom: 15px;
+            }
+
+            .wp-block-categories li:last-child {
+                margin-bottom: 0;
+            }
+
+            .wp-block-categories li a {
+                display: inline-block;
+                color: var(--st-body-color);
+                text-decoration: none;
+            }
+
+            .wp-block-categories li a:hover {
+                text-decoration: underline;
+                color: var(--st-body-color);
+            }
+
+            .widget ul.wp-block-latest-posts {
+                margin: 0 0 60px 0;
+                padding: 0;
+                list-style: none;
+                counter-reset: post-count;
+            }
+
+            .widget ul.wp-block-latest-posts li {
+                font-family: var(--st-primary-font);
+                counter-increment: post-count;
+                position: relative;
+                padding-left: 0;
+                font-size: .8em;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            .widget ul.wp-block-latest-posts li:last-child {
+                margin-bottom: 0;
+            }
+
+            .widget ul.wp-block-latest-posts li::before {
+                display: none;
+            }
+
+            .widget ul.wp-block-latest-posts li a {
+                display: inline-block;
+                font-size: 1.3em;
+                line-height: 1.5;
+            }
+
+            .widget ul.wp-block-latest-posts li>a {
+                font-family: var(--st-primary-font);
+                width: 100%;
+                font-weight: 400;
+            }
+
+            .widget ul.wp-block-latest-posts li a:hover {
+                text-decoration: underline;
+            }
+
+            .widget ul.wp-block-latest-posts li .wp-block-latest-posts__post-author,
+            .widget ul.wp-block-latest-posts li .wp-block-latest-posts__post-date {
+                margin-top: 8px;
+                display: inline-block;
+                opacity: .75;
+            }
+
+            ul.wp-block-latest-posts li .wp-block-latest-posts__post-author+.wp-block-latest-posts__post-date {
+                padding-left: 10px;
+            }
+
+            .wp-block-tag-cloud {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -3px 60px;
+            }
+
+            .wp-block-tag-cloud a {
+                display: inline-block;
+                font-size: .8em !important;
+                color: var(--st-heading-color);
+                background: rgba(var(--st-black-color-rgb), .07);
+                line-height: 1.3;
+                padding: 10px 20px;
+                margin: 3px;
+                text-decoration: none;
+            }
+
+            .site-footer .wp-block-tag-cloud a {
+                background: rgba(var(--st-footer-txt-color-rgb), .07);
+                color: var(--st-footer-txt-color);
+                text-decoration: none;
+            }
+
+            .site-footer .wp-block-tag-cloud a:hover {
+                background: rgba(var(--st-footer-txt-color-rgb), .2);
+            }
+
+            .wp-block-tag-cloud a:hover {
+                background: rgba(var(--st-black-color-rgb), .15);
+            }
+
+            .site-footer .widget,
+            .site-footer .wp-block-categories li,
+            .site-footer .wp-block-categories li a {
+                color: rgba(var(--st-footer-txt-color-rgb), .8);
+            }
+
+            .site-footer .wp-block-categories li a:hover {
+                color: var(--st-footer-txt-color);
+            }
+        }
+
+          @media all {
+            a {
+                background-color: transparent;
+            }
+
+            img {
+                border-style: none;
+            }
+
+            button {
+                font-family: inherit;
+                font-size: 100%;
+                line-height: 1.15;
+                margin: 0;
+            }
+
+            button {
+                overflow: visible;
+            }
+
+            button {
+                text-transform: none;
+            }
+
+            button {
+                -webkit-appearance: button;
+            }
+
+            button::-moz-focus-inner {
+                border-style: none;
+                padding: 0;
+            }
+
+            button:-moz-focusring {
+                outline: 1px dotted ButtonText;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: inherit;
+            }
+
+            button {
+                color: inherit;
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            h4 {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                clear: both;
+                font-family: var(--st-primary-font);
+                color: var(--st-heading-color);
+                font-weight: 700;
+                line-height: 1.3;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            ul {
+                margin: 0 0 1em 0;
+                padding: 0 0 0 1rem;
+            }
+
+            ul {
+                list-style: disc;
+            }
+
+            img {
+                height: auto;
+                max-width: 100%;
+                vertical-align: top;
+            }
+
+            a {
+                color: var(--st-primary-color);
+                text-decoration: none;
+                transition: all ease-in-out 0.3s;
+            }
+
+            a:visited {
+                color: inherit;
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                color: inherit;
+            }
+
+            a:focus {
+                outline: none;
+            }
+
+            a:hover,
+            a:active {
+                outline: 0;
+            }
+
+            a:hover {
+                color: var(--st-seecondary-color);
+            }
+
+            .container::before,
+            .container::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+            }
+
+            .container:after {
+                clear: both;
+            }
+
+            button {
+                border: 1px solid var(--st-primary-color);
+                border-radius: 0.5rem;
+                background: var(--st-primary-color);
+                color: var(--st-white-color);
+                line-height: 1;
+                font-size: 1rem;
+                padding: 0.625rem 1.5625rem;
+                cursor: pointer;
+                min-height: 3.125rem;
+                display: inline-flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                transition: all ease-in-out 0.35s;
+            }
+
+            button:hover {
+                background: var(--st-secondary-color);
+                border-color: var(--st-secondary-color);
+            }
+
+            button:active,
+            button:focus {
+                border-color: inherit;
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            .widget {
+                margin: 0 0 3.125rem;
+            }
+
+            .widget ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .widget ul li {
+                margin-bottom: 0.9375rem;
+                display: block;
+                font-size: 1rem;
+            }
+
+            .widget ul li a {
+                display: inline-block;
+                color: var(--st-body-color);
+                text-decoration: none;
+            }
+
+            .widget ul li a:hover {
+                color: var(--st-primary-color);
+            }
+
+            .widget_text {
+                font-size: 1rem;
+            }
+
+            .widget_text p {
+                margin-top: 0;
+                margin-bottom: 1.25rem;
+                line-height: 2;
+            }
+
+            .widget_text p:last-child {
+                margin-bottom: 0;
+            }
+
+            .widget_recent_entries ul li {
+                border-bottom: 1px solid rgba(var(--st-black-color-rgb), 0.07);
+                padding-bottom: 0.9375rem;
+                margin-bottom: 0.9375rem;
+            }
+
+            .widget_recent_entries ul li:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .widget_recent_entries ul li a {
+                display: block;
+                font-weight: 400;
+                line-height: 1.45;
+            }
+
+            .widget_recent_entries ul li a:hover {
+                text-decoration: underline;
+            }
+
+            .widget_categories ul li {
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 0.875rem;
+                border-bottom: 1px solid rgba(var(--st-black-color-rgb), 0.07);
+                padding-bottom: 0.9375rem;
+                margin-bottom: 0.9375rem;
+            }
+
+            .widget_categories ul li:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .site-footer .widget_categories ul li {
+                border-bottom-color: rgba(var(--st-white-color-rgb), 0.1);
+            }
+
+            .widget_categories ul li a {
+                font-weight: 400;
+                flex: 1;
+                font-size: 1rem;
+            }
+
+            .widget_categories ul li a:hover {
+                text-decoration: underline;
+            }
+
+            .container {
+                max-width: 420px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media (min-width: 768px) {
+                .container {
+                    max-width: 768px;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                .container {
+                    max-width: 1000px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    max-width: 1170px;
+                }
+            }
+
+            @media (min-width: 1367px) {
+                .container {
+                    max-width: 1260px;
+                }
+            }
+
+            ul {
+                padding-left: 2em;
+            }
+
+            @media (min-width: 768px) {
+                ul {
+                    padding-left: 2.25em;
+                }
+            }
+
+            ul>li {
+                margin-bottom: 0.75em;
+            }
+
+            ul>li:last-child {
+                margin-bottom: 0;
+            }
+
+            .social-list {
+                margin: 0 -0.625rem;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .social-list li {
+                display: inline-block;
+                font-size: 1.5rem;
+                line-height: 1;
+                margin: 0.3125rem;
+            }
+
+            .social-list li:last-child {
+                margin: 0.3125rem;
+            }
+
+            .social-list li a {
+                display: inline-block;
+                padding: 0.3125rem;
+                text-decoration: none;
+            }
+
+            .social-list li a:hover {
+                color: var(--st-primary-color);
+            }
+
+            .goto-top {
+                position: fixed;
+                bottom: 0.9375rem;
+                right: 0.9375rem;
+                border: 1px solid var(--st-white-color);
+                background: var(--st-primary-color);
+                color: var(--st-white-color);
+                border-radius: 100%;
+                padding: 0;
+                width: 2.5rem;
+                height: 2.5rem;
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(100%);
+                z-index: 99;
+            }
+
+            @media (min-width: 768px) {
+                .goto-top {
+                    bottom: 1.875rem;
+                    right: 1.875rem;
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+
+            .goto-top.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .goto-top:hover {
+                background: var(--st-secondary-color);
+                border-color: var(--st-white-color);
+            }
+
+            .site-footer {
+                padding-left: 15px;
+                padding-right: 15px;
+                background: var(--st-footer-bg);
+                border-top: 1p solid var(--st-footer-txt-color);
+            }
+
+            .site-footer .widget {
+                margin: 0;
+            }
+
+            .site-footer .widget ul li a {
+                color: rgba(var(--st-footer-txt-color-rgb), 0.75);
+            }
+
+            .site-footer .widget ul li a:hover {
+                color: var(--st-footer-txt-color);
+            }
+
+            .site-footer h4 {
+                color: var(--st-footer-txt-color);
+            }
+
+            .top-footer .section-row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding-top: 1.5625rem;
+                padding-bottom: 1.5625rem;
+                border-bottom: 1px solid rgba(var(--st-footer-txt-color-rgb), 0.1);
+            }
+
+            .top-footer .section-col:first-child {
+                flex: 1;
+            }
+
+            @media (max-width: 767.98px) {
+                .top-footer .section-col:first-child {
+                    padding-right: 1.25rem;
+                }
+            }
+
+            .top-footer .social-list li a {
+                color: var(--st-footer-txt-color);
+            }
+
+            .top-footer .social-list li a:hover {
+                color: var(--st-primary-color);
+            }
+
+            .mid-footer+.bottom-footer .container {
+                border-top: 1px solid rgba(var(--st-footer-txt-color-rgb), 0.1);
+            }
+
+            .mid-footer .footer-grid {
+                padding-top: 3.125rem;
+            }
+
+            @media (min-width: 768px) {
+                .mid-footer .footer-grid:not(.column-1) {
+                    margin: 0 -0.9375rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                }
+            }
+
+            .mid-footer .footer-grid .col {
+                margin-bottom: 3.125rem;
+                color: var(--st-footer-txt-color);
+            }
+
+            @media (min-width: 768px) {
+                .mid-footer .footer-grid.column-4 .col {
+                    width: 50%;
+                    padding: 0 0.9375rem;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                .mid-footer .footer-grid.column-4 .col {
+                    width: 23%;
+                    padding: 0 10px;
+                }
+            }
+
+            .bottom-footer {
+                font-size: 0.75rem;
+                color: var(--st-footer-txt-color);
+            }
+
+            .bottom-footer a {
+                color: inherit;
+            }
+
+            .bottom-footer a:hover {
+                text-decoration: underline;
+            }
+
+            .bottom-footer .container {
+                padding: 1.5625rem 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .bottom-footer .copyright {
+                flex: 1;
+            }
+
+            .bottom-footer .footer-nav ul {
+                margin: 0 -0.9375rem;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .bottom-footer .footer-nav ul li {
+                display: inline-block;
+                padding: 0.1875rem 0.9375rem;
+                margin: 0;
+            }
+        }
+
+        
+        :root .site-footer {
+            --st-footer-bg: #004124;
+            --st-footer-txt-color: #ffffff;
+            --st-footer-txt-color-rgb: 255, 255, 255;
+        }
+        .footer-cta {
+            background-color: #004124;
+           color: #ffffff;
+            --st-footer-txt-color-rgb: 255, 255, 255;
+        }
+    </style>
+    <style>
+  
+@media all{
+img{max-width:100%;height:auto;}
+}
+/*! CSS Used from: https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/themes/sublime-business-pro/style.css?ver=1.0.2 ; media=all */
+@media all{
+img{border-style:none;}
+*,*::before,*::after{box-sizing:inherit;}
+h2,h5{margin-top:0;margin-bottom:1.25rem;clear:both;font-family:var(--st-primary-font);color:var(--st-heading-color);font-weight:700;line-height:1.3;}
+h2{font-size:2.25rem;}
+h5{font-size:1.25rem;}
+img{height:auto;max-width:100%;vertical-align:top;}
+}
+/*! CSS Used from: Embedded */
+:root .entry-content h2{--st-h2-font:"Manrope", sans-serif;--st-h2-fontSize:36px;--st-h2-fontWeight:700;--st-h2-textTransform:none;}
+:root .entry-content h5{--st-h5-font:"Manrope", sans-serif;--st-h5-fontSize:20px;--st-h5-fontWeight:700;--st-h5-textTransform:none;}
+/*! CSS Used from: https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.7.8 ; media=all */
+@media all{
+.elementor *,.elementor :after,.elementor :before{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.elementor img{height:auto;max-width:100%;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none;}
+.elementor-element{--flex-direction:initial;--flex-wrap:initial;--justify-content:initial;--align-items:initial;--align-content:initial;--gap:initial;--flex-basis:initial;--flex-grow:initial;--flex-shrink:initial;--order:initial;--align-self:initial;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:var(--flex-direction);flex-direction:var(--flex-direction);-ms-flex-wrap:var(--flex-wrap);flex-wrap:var(--flex-wrap);-webkit-box-pack:var(--justify-content);-ms-flex-pack:var(--justify-content);justify-content:var(--justify-content);-webkit-box-align:var(--align-items);-ms-flex-align:var(--align-items);align-items:var(--align-items);-ms-flex-line-pack:var(--align-content);align-content:var(--align-content);gap:var(--gap);-ms-flex-preferred-size:var(--flex-basis);flex-basis:var(--flex-basis);-webkit-box-flex:var(--flex-grow);-ms-flex-positive:var(--flex-grow);flex-grow:var(--flex-grow);-ms-flex-negative:var(--flex-shrink);flex-shrink:var(--flex-shrink);-webkit-box-ordinal-group:var(--order);-ms-flex-order:var(--order);order:var(--order);-ms-flex-item-align:var(--align-self);align-self:var(--align-self);}
+.elementor-section{position:relative;}
+.elementor-section .elementor-container{display:-webkit-box;display:-ms-flexbox;display:flex;margin-right:auto;margin-left:auto;position:relative;}
+@media (max-width:1024px){
+.elementor-section .elementor-container{-ms-flex-wrap:wrap;flex-wrap:wrap;}
+}
+.elementor-section.elementor-section-boxed>.elementor-container{max-width:1140px;}
+.elementor-widget-wrap{position:relative;width:100%;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start;}
+.elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;}
+.elementor-widget-wrap>.elementor-element{width:100%;}
+.elementor-widget{position:relative;}
+.elementor-widget:not(:last-child){margin-bottom:20px;}
+.elementor-column{min-height:1px;}
+.elementor-column{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;}
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:10px;}
+@media (min-width:768px){
+.elementor-column.elementor-col-50{width:50%;}
+.elementor-column.elementor-col-100{width:100%;}
+}
+@media (max-width:767px){
+.elementor-column{width:100%;}
+}
+.elementor-element .elementor-widget-container{-webkit-transition:background .3s,border .3s,border-radius .3s,-webkit-box-shadow .3s;transition:background .3s,border .3s,border-radius .3s,-webkit-box-shadow .3s;-o-transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;transition:background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-box-shadow .3s;}
+.elementor-shape{overflow:hidden;position:absolute;left:0;width:100%;line-height:0;direction:ltr;}
+.elementor-shape-top{top:-1px;}
+.elementor-shape svg{display:block;width:calc(100% + 1.3px);position:relative;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);}
+.elementor-shape .elementor-shape-fill{fill:#fff;-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transform:rotateY(0deg);transform:rotateY(0deg);}
+}
+/*! CSS Used from: https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/elementor/css/post-5.css?ver=1664769220 ; media=all */
+@media all{
+.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}
+.elementor-widget:not(:last-child){margin-bottom:20px;}
+.elementor-element{--widgets-spacing:20px;}
+@media (max-width:1024px){
+.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}
+}
+@media (max-width:767px){
+.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}
+}
+}
+/*! CSS Used from: https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/elementor/css/global.css?ver=1664769220 ; media=all */
+@media all{
+.text-small {
+    color: var( --e-global-color-primarycolor );
+    font-family: "Manrope", Sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.text-big {
+    color: var( --e-global-color-primarycolor );
+    font-family: "Manrope", Sans-serif;
+    font-size: 66px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.text-q{
+    color: var( --e-global-color-themeblackcolor );
+    font-family: "Manrope", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+}
+/*! CSS Used from: https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/elementor/css/post-49.css?ver=1665491394 ; media=all */
+@media all{
+.elementor-49 .elementor-element.elementor-element-6e5a189 > .elementor-container{text-align:left;}
+.elementor-49 .elementor-element.elementor-element-6e5a189{margin-top:90px;margin-bottom:90px;}
+.elementor-49 .elementor-element.elementor-element-d76016c.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}
+.elementor-49 .elementor-element.elementor-element-496f03d{text-align:justify;}
+.elementor-49 .elementor-element.elementor-element-496f03d .elementor-heading-title{color:var( --e-global-color-primarycolor );font-family:"Manrope", Sans-serif;font-size:38px;font-weight:400;text-transform:uppercase;}
+.elementor-49 .elementor-element.elementor-element-496f03d > .elementor-widget-container{margin:0px 0px 0px 0px;}
+.elementor-49 .elementor-element.elementor-element-adfe779{text-align:justify;}
+.elementor-49 .elementor-element.elementor-element-adfe779 .elementor-heading-title{color:var( --e-global-color-primarycolor );font-family:"Manrope", Sans-serif;font-size:66px;font-weight:700;text-transform:uppercase;}
+.elementor-49 .elementor-element.elementor-element-adfe779 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}
+.elementor-49 .elementor-element.elementor-element-6a478fc .elementor-heading-title{color:var( --e-global-color-themeblackcolor );font-family:"Manrope", Sans-serif;font-size:24px;font-weight:700;line-height:36px;}
+.elementor-49 .elementor-element.elementor-element-6a478fc > .elementor-widget-container{margin:0px 0px 0px 0px;}
+.elementor-49 .elementor-element.elementor-element-fd0761d .elementor-heading-title{color:var( --e-global-color-themeblackcolor );font-family:"Manrope", Sans-serif;font-size:24px;font-weight:700;line-height:36px;}
+.elementor-49 .elementor-element.elementor-element-fd0761d > .elementor-widget-container{margin:0px 0px 0px 0px;}
+}
+/*! CSS Used from: chrome-extension://jabopobgcpjmedljpbcaablpmlmfcogm/wf.css */
+*{cursor:default!important;}
+/*! CSS Used from: Embedded */
+.elementor-heading-title{padding:0;margin:0;line-height:1;}
+/*! CSS Used from: Embedded */
+.elementor-widget-image{text-align:center;}
+.elementor-widget-image img{vertical-align:middle;display:inline-block;}
+
+    </style>
+</head>
+
+<body>
+    <div class="top-header">
+        <div class="container">
+            <div class="header-left">
+                <div class="site-branding" itemtype="https://schema.org/Organization" itemscope="">
+                    <a href="https://stupefied-wilbur.185-92-223-5.plesk.page/" class="custom-logo-link" rel="home"
+                        aria-current="page"><img width="178" height="40"
+                            src="https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/cropped-logo-178.png"
+                            class="custom-logo" alt="Gwyntt"></a>
+                    <h1 class="site-title"><a href="https://stupefied-wilbur.185-92-223-5.plesk.page/"
+                            rel="home">Gwyntt</a></h1>
+                    <p class="site-description">Just another WordPress site</p>
+                </div><!-- .site-branding -->
+            </div>
+            <div class="header-center">
+                <nav id="site-navigation" class="main-navigation" itemtype="https://schema.org/SiteNavigationElement"
+                    itemscope="">
+                    <button class="toggle-button" aria-controls="primary-menu" data-toggle-target=".main-menu-modal"
+                        data-toggle-body-class="showing-main-menu-modal" aria-expanded="false"
+                        data-set-focus=".close-main-nav-toggle">
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                    </button>
+                    <div class="primary-menu-list main-menu-modal cover-modal"
+                        data-modal-target-string=".main-menu-modal">
+                        <button class="close close-main-nav-toggle" data-toggle-target=".main-menu-modal"
+                            data-toggle-body-class="showing-main-menu-modal" aria-expanded="false"
+                            data-set-focus=".main-menu-modal">
+                            <span class="toggle-bar"></span>
+                            <span class="toggle-text">Close</span>
+                        </button>
+                        <div class="mobile-menu" aria-label="Mobile">
+                            <div class="menu-nav-menu-container">
+                                <ul id="primary-menu" class="menu main-menu-modal">
+                                    <li id="menu-item-3784"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3784">
+                                        <a href="#">Hire the best marketer</a></li>
+                                    <li id="menu-item-3778"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-49 current_page_item menu-item-3778">
+                                        <a href="https://stupefied-wilbur.185-92-223-5.plesk.page/"
+                                            aria-current="page">Home</a></li>
+                                    <li id="menu-item-3781"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3781">
+                                        <a
+                                            href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/who-we-are/">About</a>
+                                    </li>
+                                    <li id="menu-item-3782"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3782">
+                                        <a
+                                            href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/resources-listing/">Services</a>
+                                    </li>
+                                    <li id="menu-item-3783"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3783">
+                                        <a href="#">Join Us</a></li>
+                                    <li id="menu-item-3779"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3779">
+                                        <a
+                                            href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/blog/">Blog</a>
+                                    </li>
+                                    <li id="menu-item-3785"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3785">
+                                        <a href="#">Login</a></li>
+                                    <li id="menu-item-3786"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3786">
+                                        <a
+                                            href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/customer-registration/">Let’s
+                                            Start</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav><!-- #site-navigation -->
+            </div>
+            <div class="header-right">
+            </div>
+        </div>
+    </div>
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-6e5a189 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6e5a189" data-element_type="section" data-settings="{&quot;shape_divider_top&quot;:&quot;waves&quot;}">
+        <div class="elementor-shape elementor-shape-top" data-negative="false">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+<path class="elementor-shape-fill" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+</svg>		</div>
+        <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-302b9c3" data-id="302b9c3" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-6cf3650 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6cf3650" data-element_type="section">
+            <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d76016c" data-id="d76016c" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-496f03d elementor-widget elementor-widget-heading" data-id="496f03d" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default text-small">Frequently</h2></div>
+    </div>
+    <div class="elementor-element elementor-element-adfe779 elementor-widget elementor-widget-heading" data-id="adfe779" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+<div class="elementor-heading-title elementor-size-default text-big">Asked Questions</div>		</div>
+    </div>
+    <div class="elementor-element elementor-element-6a478fc elementor-widget elementor-widget-heading" data-id="6a478fc" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default text-q">WHICH MARKETS DO YOU CURRENTLY SERVE?
+<br> 
+</h2><h5 style="font-family: var(--st-primary-font); color: rgb(0, 65, 36); --st-h5-font: &quot;Manrope&quot;, sans-serif; --st-h5-fontSize: 20px; --st-h5-fontWeight: 700; --st-h5-textTransform: none; letter-spacing: 0.5px; white-space: normal; word-spacing: 3px;"><span style="color: rgb(85, 90, 88); font-size: 16px; font-weight: 400; letter-spacing: 1px; white-space: pre-wrap; word-spacing: 1px;">We have head offices in North America, Asia Pacific and Europe, which gives us a broad reach. We are currently well-positioned to serve clients in both emerging and developed markets.</span></h5>		</div>
+    </div>
+    <div class="elementor-element elementor-element-fd0761d elementor-widget elementor-widget-heading" data-id="fd0761d" data-element_type="widget" data-widget_type="heading.default">
+    <div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default text-q">How CAN I SET UP A CONSULTATION &amp; DEMO?<br> 
+</h2><h5 style="font-family: var(--st-primary-font); color: rgb(0, 65, 36); --st-h5-font: &quot;Manrope&quot;, sans-serif; --st-h5-fontSize: 20px; --st-h5-fontWeight: 700; --st-h5-textTransform: none; letter-spacing: 0.5px; white-space: normal; word-spacing: 3px;"><span style="color: rgb(85, 90, 88); font-size: 16px; font-weight: 400; letter-spacing: 1px; white-space: pre-wrap; word-spacing: 1px;">We offer a free initial consultation to new clients, to better understand their needs and explain our services. Simply email us to book your session.</span><span style="color: rgb(85, 90, 88); font-size: 16px; font-weight: 400; letter-spacing: 1px; white-space: pre-wrap; word-spacing: 1px;"></span><br></h5>		</div>
+    </div>
+        </div>
+</div>
+    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-47e117e" data-id="47e117e" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-ce7ad0a elementor-widget elementor-widget-image" data-id="ce7ad0a" data-element_type="widget" data-widget_type="image.default">
+    <div class="elementor-widget-container">
+                                                <img width="1024" height="1024" src="https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2-1024x1024.png" class="attachment-large size-large" alt="" srcset="https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2.png  1024w,https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2-300x300.png  300w,https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2-150x150.png  150w,https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2-768x768.png  768w,https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/2-500x500.png  500w" sizes="(max-width: 1024px) 100vw, 1024px">															</div>
+    </div>
+        </div>
+</div>
+                </div>
+</section>
+        </div>
+</div>
+                </div>
+</section>
+
+    <section id="footer_cta" class="footer-cta">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">It's your business. We're just here to help.</h2>
+                <div class="section-desc">
+                    <p>Trusted by thousands of businesses worldwide</p>
+                </div>
+            </header>
+            <div class="btn-holder"><a href="#" class="btn btn-transparent"><span>Explore Flowup</span><svg width="12"
+                        height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.41083 10.4108L5.58917 11.5892L11.1783 5.99999L5.58917 0.410828L4.41083 1.58916L7.98833 5.16666H0V6.83333H7.98833L4.41083 10.4108Z"
+                            fill="currentcolor"></path>
+                    </svg></a><a href="#" class="btn btn-fill"><span>Start Free</span><svg width="12" height="12"
+                        viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.41083 10.4108L5.58917 11.5892L11.1783 5.99999L5.58917 0.410828L4.41083 1.58916L7.98833 5.16666H0V6.83333H7.98833L4.41083 10.4108Z"
+                            fill="currentcolor"></path>
+                    </svg></a></div>
+        </div>
+    </section>
+
+    <footer id="colophon" class="site-footer" itemtype="https://schema.org/WPFooter" itemscope="">
+        <div class="top-footer">
+            <div class="container">
+                <div class="section-row">
+                    <div class="section-col"><a href="https://stupefied-wilbur.185-92-223-5.plesk.page"><img
+                                src="https://stupefied-wilbur.185-92-223-5.plesk.page/wp-content/uploads/2022/10/cropped-logo-178.png"
+                                alt="Gwyntt"></a></div>
+                    <div class="section-col">
+                        <ul class="social-list">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" rel="nofollow noopener">
+                                    <span class="icon-wrap">
+                                        <svg class="st-icon" width="20px" height="20px"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path fill="currentColor"
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg> </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank" rel="nofollow noopener">
+                                    <span class="icon-wrap">
+                                        <svg class="st-icon" width="20px" height="20px" viewBox="0 0 20 20">
+                                            <path fill="currentcolor"
+                                                d="M20,3.8c-0.7,0.3-1.5,0.5-2.4,0.6c0.8-0.5,1.5-1.3,1.8-2.3c-0.8,0.5-1.7,0.8-2.6,1c-0.7-0.8-1.8-1.3-3-1.3c-2.3,0-4.1,1.8-4.1,4.1c0,0.3,0,0.6,0.1,0.9C6.4,6.7,3.4,5.1,1.4,2.6C1,3.2,0.8,3.9,0.8,4.7c0,1.4,0.7,2.7,1.8,3.4C2,8.1,1.4,7.9,0.8,7.6c0,0,0,0,0,0.1c0,2,1.4,3.6,3.3,4c-0.3,0.1-0.7,0.1-1.1,0.1c-0.3,0-0.5,0-0.8-0.1c0.5,1.6,2,2.8,3.8,2.8c-1.4,1.1-3.2,1.8-5.1,1.8c-0.3,0-0.7,0-1-0.1c1.8,1.2,4,1.8,6.3,1.8c7.5,0,11.7-6.3,11.7-11.7c0-0.2,0-0.4,0-0.5C18.8,5.3,19.4,4.6,20,3.8z">
+                                            </path>
+                                        </svg> </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.pinterest.com/" target="_blank" rel="nofollow noopener">
+                                    <span class="icon-wrap">
+                                        <svg class="st-icon" width="20px" height="20px" viewBox="0 0 20 20">
+                                            <path fill="currentcolor"
+                                                d="M10,0C4.5,0,0,4.5,0,10c0,4.1,2.5,7.6,6,9.2c0-0.7,0-1.5,0.2-2.3c0.2-0.8,1.3-5.4,1.3-5.4s-0.3-0.6-0.3-1.6c0-1.5,0.9-2.6,1.9-2.6c0.9,0,1.3,0.7,1.3,1.5c0,0.9-0.6,2.3-0.9,3.5c-0.3,1.1,0.5,1.9,1.6,1.9c1.9,0,3.2-2.4,3.2-5.3c0-2.2-1.5-3.8-4.2-3.8c-3,0-4.9,2.3-4.9,4.8c0,0.9,0.3,1.5,0.7,2C6,12,6.1,12.1,6,12.4c0,0.2-0.2,0.6-0.2,0.8c-0.1,0.3-0.3,0.3-0.5,0.3c-1.4-0.6-2-2.1-2-3.8c0-2.8,2.4-6.2,7.1-6.2c3.8,0,6.3,2.8,6.3,5.7c0,3.9-2.2,6.9-5.4,6.9c-1.1,0-2.1-0.6-2.4-1.2c0,0-0.6,2.3-0.7,2.7c-0.2,0.8-0.6,1.5-1,2.1C8.1,19.9,9,20,10,20c5.5,0,10-4.5,10-10C20,4.5,15.5,0,10,0z">
+                                            </path>
+                                        </svg> </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener">
+                                    <span class="icon-wrap">
+                                        <svg class="st-icon" width="20px" height="20px"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg> </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mid-footer">
+            <div class="container">
+                <div class="footer-grid column-4">
+                    <div class="col">
+                        <section id="block-7" class="widget widget_block widget_text">
+                            <p>Have you seen what we've been working on at Flowup?<br>With more than 20 years of
+                                experience we can deliver the best services cum soluta nobis est eligendi optio cumque
+                                nihil impedit quo minus id quod maxime placeat facere possimus.<br>Sed ut perspiciatis
+                                unde omnis iste natus error sit voluptatem accusantium doloremqu.</p>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="block-8" class="widget widget_block">
+                            <h4>Popular Categories</h4>
+                        </section>
+                        <section id="block-9" class="widget widget_block widget_categories">
+                            <ul class="wp-block-categories-list wp-block-categories">
+                                <li class="cat-item cat-item-2"><a
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/category/annoncements/">Annoncements</a>
+                                </li>
+                                <li class="cat-item cat-item-3"><a
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/category/business/">Business</a>
+                                </li>
+                                <li class="cat-item cat-item-4"><a
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/category/general/">General</a>
+                                </li>
+                                <li class="cat-item cat-item-5"><a
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/category/news/">News</a>
+                                </li>
+                                <li class="cat-item cat-item-1"><a
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/category/uncategorized/">Uncategorized</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="block-10" class="widget widget_block">
+                            <h4>Recent Posts</h4>
+                        </section>
+                        <section id="block-11" class="widget widget_block widget_recent_entries">
+                            <ul class="wp-block-latest-posts__list has-dates has-author wp-block-latest-posts">
+                                <li><a class="wp-block-latest-posts__post-title"
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/2022/09/25/hello-world/">Hello
+                                        world!</a>
+                                    <div class="wp-block-latest-posts__post-author">by admin</div><time
+                                        datetime="2022-09-25T09:18:46+00:00"
+                                        class="wp-block-latest-posts__post-date">September 25, 2022</time>
+                                </li>
+                                <li><a class="wp-block-latest-posts__post-title"
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/2021/11/14/introducing-innovative-ideas-for-business-in-town/">Introducing
+                                        innovative ideas for business in town</a>
+                                    <div class="wp-block-latest-posts__post-author">by admin</div><time
+                                        datetime="2021-11-14T22:46:47+00:00"
+                                        class="wp-block-latest-posts__post-date">November 14, 2021</time>
+                                </li>
+                                <li><a class="wp-block-latest-posts__post-title"
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/2021/11/14/supporting-employees-through-the-menopause-guidance-for-employers/">Supporting
+                                        Employees Through The Menopause Guidance For Employers</a>
+                                    <div class="wp-block-latest-posts__post-author">by admin</div><time
+                                        datetime="2021-11-14T22:05:03+00:00"
+                                        class="wp-block-latest-posts__post-date">November 14, 2021</time>
+                                </li>
+                                <li><a class="wp-block-latest-posts__post-title"
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/2021/11/14/policies-procedures-for-startups/">Policies
+                                        &amp; Procedures for Startups</a>
+                                    <div class="wp-block-latest-posts__post-author">by admin</div><time
+                                        datetime="2021-11-14T20:35:58+00:00"
+                                        class="wp-block-latest-posts__post-date">November 14, 2021</time>
+                                </li>
+                                <li><a class="wp-block-latest-posts__post-title"
+                                        href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/2021/11/14/everything-about-the-business-world/">Everything
+                                        about the business world</a>
+                                    <div class="wp-block-latest-posts__post-author">by admin</div><time
+                                        datetime="2021-11-14T19:18:15+00:00"
+                                        class="wp-block-latest-posts__post-date">November 14, 2021</time>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col">
+                        <section id="block-12" class="widget widget_block">
+                            <h4>Popular Tags</h4>
+                        </section>
+                        <section id="block-13" class="widget widget_block widget_tag_cloud">
+                            <p class="wp-block-tag-cloud"><a
+                                    href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/tag/business/"
+                                    class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 8pt;"
+                                    aria-label="Business (2 items)">Business</a>
+                                <a href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/tag/consulting/"
+                                    class="tag-cloud-link tag-link-7 tag-link-position-2" style="font-size: 22pt;"
+                                    aria-label="Consulting (6 items)">Consulting</a>
+                                <a href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/tag/fourth-tag/"
+                                    class="tag-cloud-link tag-link-8 tag-link-position-3"
+                                    style="font-size: 19.351351351351pt;" aria-label="Human Resource (5 items)">Human
+                                    Resource</a>
+                                <a href="https://stupefied-wilbur.185-92-223-5.plesk.page/index.php/tag/marketing/"
+                                    class="tag-cloud-link tag-link-9 tag-link-position-4"
+                                    style="font-size: 16.324324324324pt;" aria-label="Marketing (4 items)">Marketing</a>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="copyright">
+                    <span class="copy-right">© Copyright 2022 <a
+                            href="https://stupefied-wilbur.185-92-223-5.plesk.page/">Gwyntt</a>. </span><span
+                        class="author-link"> Sublime Business Pro | Developed By <a href="https://sublimetheme.com/"
+                            rel="nofollow" target="_blank">SublimeTheme</a></span>.<span class="wp-link"> Powered by <a
+                            href="https://wordpress.org/" target="_blank">WordPress</a>.</span>
+                </div>
+                <div class="footer-nav">
+                    <nav id="footer-navigation" class="footer-navigation">
+                        <div class="menu-footer-menu-container">
+                            <ul id="footer-menu" class="menu footer-menu">
+                                <li id="menu-item-3110"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3110"><a
+                                        href="#">Terms &amp; Conditions</a></li>
+                                <li id="menu-item-3111"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3111"><a
+                                        href="#">Privacy Policy</a></li>
+                                <li id="menu-item-3113"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3113"><a
+                                        href="#">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- #footer-navigation -->
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

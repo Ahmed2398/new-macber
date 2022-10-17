@@ -5,10 +5,10 @@
 .navbar .nav-link{
   text-transform: uppercase;
   padding: 0.85rem 2rem;
-  font-weight: 400;
+  font-weight: 600;
   position: relative;
   color: var(--primary-color1) !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
  
 }
 .navbar .active .nav-link {

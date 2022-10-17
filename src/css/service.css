@@ -98,7 +98,7 @@ animation: shake 150ms 2 linear;
   background-color: transparent;
   color: var(--primary-color2);
   padding: 15px 0;
-  margin: 6px;
+  margin: 10px 15px;
   border: none;
   font-weight: 400;
   font-size: 18px;
@@ -192,3 +192,6 @@ opacity: 0.9;
     justify-content: flex-start;
     font-size: 20px;
 }
+.project-margen{
+  margin: 10px 0;
+} 

@@ -23,7 +23,7 @@
   }
   
   .box{
-    background: #FCF9FF;
+  background: #FCF9FF;
   box-shadow: 0px 0px 13px #DED6E8;
   border-radius: 5px;
   position: relative;
@@ -76,13 +76,12 @@
 }
 .why-choose-us{
   background-image: url('../../src/image/newmisiion.png');
-  background-position: center;
+  background-position: inherit;
   background-repeat: no-repeat;
   width: 100%;
-  background-size: cover;
-}
+  background-size: cover;       }
 .why-choose-us .box{
-  background-color: #ddc554;
+  background-color: #ffc107!important;
   height: auto;
 }
 .box-mis{
@@ -91,9 +90,8 @@
   border-radius: 5px;
   width: 500px;
   height: 534px;
-  padding: 2rem 0;
-  
-  border: 23px solid yellow;
+
+  border: 23px solid #ffc107!important;
 }
 .box-vis{
   background: #4a4085;
@@ -101,18 +99,17 @@
   border-radius: 5px;
   position: relative;
   /* width: 350px; */
-  padding: 2rem 0;
   position: relative;
   left: 10px;
   bottom: 10px;
 }
  .span-box{
-  color: #ddc554;
+  color: #ffc107;
   font-family: Raleway-Regular;
   text-transform: lowercase;
 }
 .why-choose-us h1{
-  color: yellow;
+  color: #ffc107;
   font-family: Raleway-Bold;
   text-transform: uppercase;
   font-size: 45px;
@@ -794,4 +791,51 @@ position: relative;
 .work-text {
   padding: 40px 10px;
 
+}
+/* portfolio */
+.portfolio-macber{
+  background-image: url('../../src/image/Slider.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px 0;
+  margin: 50px 0;
+}
+.fh5-light-box{
+  width: 415px;
+}
+.fh5-light-box-title{
+  color: var(--primary-color1) !important;
+}
+.text-download .btn-warning {
+  font-weight: 600;
+  font-size: 20px;
+
+}
+.card-body .btn-warning:hover{
+  transform: scale(1.1);
+  transition: 3s;
+  color: var(--primary-color1);
+
+}
+.card-body .card-text{
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+.card-img-top:hover{
+  transition: 3s;
+  transform: scale(1.1);
+}
+/* FAQ */
+.faq{
+  background-color: #F8F9FA;
+}
+ .text-head-small{
+  font-size: 5rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+ .text-head-ask{
+  font-size: 20px;
 }
