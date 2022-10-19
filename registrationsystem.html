@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration System </title>
+  <title>Registration System</title>
   <link href="src/image/icons/favicon.svg" rel="icon" media="(prefers-color-scheme: light)" />
   <link href="src/image/icons/favicon.svg" rel="icon" media="(prefers-color-scheme: dark)" />
   <!-- ADD STYLESHEET -->
@@ -15,29 +15,34 @@
   <link rel="stylesheet" href="src/css/headerFooter.css">
   <link rel="stylesheet" href="src/css/contact.css">
 
-  <link rel="stylesheet" href="src/css/media-screen.css">
   <link rel="stylesheet" href="src/icons/fontawesome-free-6.1.1-web/css/all.css">
-  <link rel="stylesheet" href="src/css/service.css">
-
   <link rel="stylesheet" href="src/css/reg.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="src/css/media-screen.css">
 
 
   <!-- END STYLESHEET -->
 </head>
 
-<body onload="loadfun()">
-  <div id="Loading">
-  </div>
+<body>
+  <div class="page-wrapper"></div>
+  <!-- Preloader -->
+  <div id="loader-wrapper">
+		<div id="loader">
+		</div>
+			
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+			
+	</div>
   <!-- MAke btn to back to top of page  -->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <!-- Start section Header  -->
-  <!-- Start section Header  -->
   <nav class="navbar navbar-expand-lg navbar-light sticky ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="src/image/logos/Macber logo (1).svg" class="w-100"
-        alt="mavber-logo"></a>
+      <a class="navbar-brand" href="index.html"><img src="src/image/logos/Macber logo.svg" class="w-100"
+          alt="mavber-logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
@@ -45,77 +50,147 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class=" navbar-nav ms-auto ">
           <li class="nav-item ">
-            <a class="nav-link " href="index.html" target="_blank">Home </a>
+            <a class="nav-link " href="index.html" target="_blank">Home</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link " href="about.html">About</a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link " href="underprocess.html">registration system</a>
-          </li>
           <li class="nav-item  ">
-            <a class="nav-link " href="underprocess.html">game development</a>
-          </li>
-          <li class="nav-item ">
             <a class="nav-link " href="softwaredevelopment.html">software development</a>
           </li>
-          
+          <li class="nav-item active ">
+            <a class="nav-link " href="registrationsystem.html">Registration System</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- END section Header  -->
-  <!-- END section Header  -->
-  <!--Start section projects -->
-  <section class="projects p-60  animate__fadeInRight" data-wow-duration="3s">
+  <section class="software  " style="padding: 145px 0;">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center mt-3 mb-3">
-          <h3 class="head-brief ">Registrains System
-          <hr class="Spereator m-auto mt-3">
-      </div>
-       <div class="col-lg-12 my-3">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <img src="src/image/orange.svg" width="100" style="width: 100%;">
-          </div>
-          <div class="col-md-6 col-sm-12 m-auto">
-            <h2 class="head-text"> orange</h2>
-            <p class="lead-text text-secondary text-description  ">
-              We contributed in the event of announcing the rebranding of Mobinil to Orange by the presence of the
-              memory game, which requires the player to remember the initial furniture locations and recollect their
-              places again to test their memory strengths.
-            </p>
-          </div>
+        <div class="col-lg-8 col-sm-6 m-auto">
+          <h3 class="head-banner h3-banner">Registration  </h3>
+          <h1 class="head-banner head-banner-h1"> system 
+           </h1>
+          <p class=" text-banner text-muted">Appsinnovate’s games development team is the most experience dexpertise on mobile apps across all mobile platforms.with more than 10 years of experience in digital business and mobile development field, appsinnovate can help you better engage your fans with mobile applications for smartphones and tablets.
+          </p>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <img src="src/image/registration system.png" alt="game" width="100%" >
         </div>
         
-       </div>
-      
-       <div class="col-lg-12 my-3">
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <img src="src/image/company/EIEC for project book fair.png" width="100" style="width: 100%;">
-  
-          </div>
-          <div class="col-md-6 col-sm-12 m-auto">
-            <h2 class="head-text"> EIEC for project book fair</h2>
-              <p class="lead-text text-secondary text-description  ">
-                To facilitate the event’s operation, we installed a comprehensive visitors’ counting system in the book
-                fair project to limit the exhibition to only the invited raising safety and security levels through video
-                analytics collecting priceless marketing information.
-                The visitors’ counting system supports different automatic reactions to events and a wide range of video
-                analytics tools, human detection classifications, and real-time and human tracking.
-              </p>
-          </div>
-        </div>
-       
-       </div>
       </div>
     </div>
   </section>
-  <!--END section our Projects -->
+  <!--Start section self-registration -->
+  <section class="projects self-registration">
+    <div class="container">
+     <div class="row">
+      <div class="col-lg-12">
+        <div class="head-reg text-center">
+          <h2>
+            Touch Screen/Self-Registration Systems
+          </h2>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <img src="src/image/Ai.png" alt="" class="w-100 border-4">
+      </div>
+      <div class="col-lg-8 col-sm-12 m-auto">
+        <p>Using leading-edge technology, Macber has managed to facilitate and transform the event visitors’ registration process from a dull, time-consuming task to an easy and user-friendly experience for the organizers and attendees by introducing Touch Screens or Self Registration Systems. </p>
+        <p>Self-Registration Systems help attendees experience an easy and seamless registration experience by providing them with clear step-by-step directions on inserting the required personal data to obtain their event access IDs and QR codes in a matter of minutes. Touch Screens Registration Systems are also considered a communication channel where Ads banners are displayed while attendees are self-registered.</p>
+        <p>Using leading-edge technology, Macber has managed to facilitate and transform the event visitors’ registration process from a dull, time-consuming task to an easy and user-friendly experience for the organizers and attendees by introducing Touch Screens or Self Registration Systems.  </p>
+      </div>
+     </div>
+  </section>
+  <!--END section self-registration -->
+  <!--Start section pre-registration -->
+  <section class="projects  pre-registration">
+    <div class="container-fluid">
+     <div class="row">
+    
+      <div class="col-lg-6 col-sm-12 m-auto">
+        <div class="head-reg text-center">
+          <h2>
+            Pre-registration Systems
+          </h2>
+        </div>
+        <p class="text-secondary text-center">Granting our users convenience does not stop there. Pre-registration systems allow attendees to pre-register their attendance beforehand through a website or mobile applications, saving them time and effort by handing them their IDs and QR codes on arrival.</p>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <img src="src/image/main-8.png" alt="" class="w-100 ">
+      </div>
+     </div>
+    </div>
+  </section>
+  <!--END sectionpre-registration-->
+  <!--Start section systems-database -->
+  <section class="projects systems-database">
+    <div class="container">
+     <div class="row">
+      <div class="col-lg-8 col-sm-12 m-auto">
+        <div class="head-reg text-left">
+          <h2>
+            Registration Systems Database: 
+          </h2>
+        </div>
+        <p>It’s an extremely organized data hub that stores all the attendees registered information (name, phone #, company, etc.) instantly in our back-end database, as every attendee has a unique username and password so he can access his database from any internet browser where he can have an overall view on the event attendee’s current data, any updated data, statistics and graphs for all the data that the client needs like (all registrants data, how many registrants visited the exhibition, total visitors for each day, dates, etc. a minute by minute</p>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <img src="src/image/main2.png" alt="" class="w-100 border-4">
+      </div>
+     </div>
+    </div>
+  </section>
+  <!--END section systems-database-->
+  <!--Start section benefits -->
+<section class="projects benefits">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-4 col-sm-12">
+      <img src="src/image/Mani-1 (1).png" alt="" class="w-100 border-4">
+    </div>
+    <div class="col-lg-8 col-sm-12 m-auto">
+      <div class="head-reg text-left">
+        <h2>
+          What are the benefits of Touch Screen Registration Systems? 
+        </h2>
+      </div>
+      <p>Self-Registration Systems will grant companies continuous communication with the attendees through:
+        You are saving time through self or pre-registration and money by eliminating printing costs and effort while reducing mistakes, lines, and staff members. 
+        We are introducing an unconventional door to increase revenue by displaying intriguing digital ads to promote offers and promotions to the attendees on the touchscreens while registering.
+        It also abides by the worldwide safety precautions since the outburst of COVID-19.
+        An accurate overview on the event’s statics, number of attendees, activities, and background.</p>
+    </div>
+    
+   </div>
+  </div>
+</section>
+<!--END section benefits-->
+<!--Start section benefits -->
+<!--Start section pre-registration -->
+<section class="projects  event">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-8 col-sm-12 m-auto like">
+      <div class="head-reg text-left">
+        <h2>
+          Event Printed IDs:
+        </h2>
+      </div>
+      <p class="text-secondary">Macber customizes IDs for every project and event, creating a unique and attractive design as per the client’s vision and preferences, utilizing high-quality plastic or cardboard(carton) ID holders and cloth of any color liners and with sizes between 5*9 cm and 14*14 cm using different printing methods such as printing directly on the ID or transfer on a thermal sticker.</p>
+    </div>
+    <div class="col-lg-4 col-sm-12 p-0">
+      <img src="src/image/main-8.png" alt="" class="w-100 border-4">
+    </div>
+   </div>
+  </div>
+</section>
+<!--END sectionpre-registration-->
+<!--END section benefits-->
   <!-- Start Footer Section -->
-  <footer class=" footer-section   ">
+  <footer class=" footer-section">
     <!--footer top start-->
     <div class="footer-top  text-white ptb-30">
       <div class="container">
@@ -167,7 +242,7 @@
                   <ul class="list-unstyled footer-nav-list mb-lg-0 ">
                     <li><a href="softwaredevelopment.html" class="text-decoration-none  nav-link">Software Development
                       </a></li>
-                    <li><a href="underprocess.html" class="text-decoration-none  nav-link">Game
+                    <li><a href="game.development.html" class="text-decoration-none  nav-link">Game
                         Development </a>
                     </li>
                     <li><a href="underprocess.html" class="text-decoration-none  nav-link">registration
@@ -232,8 +307,10 @@
     integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="src/js/wow.js"></script>
+  <script src="src/js/tab.js"></script>
   <script src="src/js/master.js"></script>
   <!-- END Script File -->
+</div>
 </body>
 
 </html>

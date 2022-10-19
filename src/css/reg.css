@@ -1,12 +1,12 @@
 @import url(./common.css);
 
-.head-bannergame{
+/* .head-bannergame{
     background-image: url('../../src/image/game-dev.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.head-game{
+} */
+/* .head-game{
   padding: 90px 0;
 }
 .brief .text-lead{
@@ -47,4 +47,101 @@ animation: shake 150ms 2 linear;
   line-height: 2.2;
   font-size: 18px;
   font-family: Raleway-Regular;
+} */
+
+/* projects */
+.self-registration{
+  padding: 60px 0;
+}
+.self-registration .head-reg{
+  margin: 30px 0;
+}
+.self-registration .head-reg h2{
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.self-registration p{
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(130, 130, 130, 1);
+  text-align: justify;
+}
+/* ****************************************** */
+.pre-registration{
+  background-color:rgba(242, 242, 242, 1);
+}
+.pre-registration .head-reg h2{
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.pre-registration p{
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(130, 130, 130, 1);
+  text-align: justify;
+}
+.pre-registration img{
+ 
+}
+
+/* ************************************ */
+.systems-database{
+  padding: 60px 0;
+}
+.systems-database .head-reg h2{
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.systems-database  p{
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(130, 130, 130, 1);
+  text-align: justify;
+}
+.systems-database img{
+  border-radius: 25px;
+}
+/******************************************* */
+.benefits{
+  padding: 60px 0;
+}
+.benefits .head-reg h2{
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.benefits  p{
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(130, 130, 130, 1);
+  text-align: justify;
+}
+.benefits img{
+  border-radius: 25px;
+}
+
+/******************************************* */
+.event{
+ padding: 30px 0;
+}
+.event .row{
+  background-color: #F2F2F2;
+  border-radius: 25px;
+}
+.event .head-reg h2{
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.event  p{
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(130, 130, 130, 1);
+  text-align: justify;
+}
+.event img{
+  border-radius: 25px;
 }

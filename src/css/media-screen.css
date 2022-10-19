@@ -56,12 +56,15 @@
     }
     .h3-banner{
       font-size: 20px;
+      margin: auto;
     }
     .head-banner-h1{
       font-size: 26px;
+      margin: auto;
     }
     .text-banner{
       font-size: 10px;
+      margin: auto;
     }
     .my-slides img{
       margin: 0;
@@ -147,6 +150,60 @@
     .card-body .card-text{
       font-size: 20px;
     }
+    .self-registration{
+      padding: 0;
+    }
+    .self-registration .head-reg h2{
+      font-size: 20px;
+    }
+    .self-registration p{
+      text-align: left;
+      font-size: 15px;
+    }
+    .self-registration img{
+      margin: 10px 0;
+      border-radius: 20px;
+    }
+    .pre-registration{
+      margin: 30px 0;
+      padding-top: 20px;
+    }
+    .pre-registration .head-reg h2{
+      font-size: 20px;
+    }
+    .systems-database .row{
+      flex-direction: column-reverse;
+    }
+    .systems-database .head-reg h2 {
+      font-size: 19px;
+      margin-top: 10px;
+  }
+  .systems-database  p {
+    font-size: 15px;
+    text-align: left;
+}
+.benefits{
+  padding: 0;
+}
+.benefits .head-reg h2{
+  font-size: 19px;
+}
+.benefits p{
+  font-size: 15px;
+  text-align: left;
+}
+.event .row{
+  flex-direction: column-reverse;
+}
+.event .head-reg h2{
+  font-size: 19px;
+  margin-top: 10px;
+  text-align: center;
+}
+.event p{
+  font-size: 15px;
+  text-align: left;
+}
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
