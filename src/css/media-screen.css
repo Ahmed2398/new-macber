@@ -204,6 +204,23 @@
   font-size: 15px;
   text-align: left;
 }
+.text-head-small{
+  font-size: 3rem;
+  margin: 0;
+}
+.pra-head-pros{
+  font-family: Raleway-mediuam;
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-16);
+    color: var(--secondary-color);
+    line-height: 2;
+    align-items: center;
+    text-transform: capitalize;
+}
+.p-60{
+  padding: 20px 0;
+}
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */

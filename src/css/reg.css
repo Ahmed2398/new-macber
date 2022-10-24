@@ -57,15 +57,20 @@ animation: shake 150ms 2 linear;
   margin: 30px 0;
 }
 .self-registration .head-reg h2{
-  font-size: 50px;
+  font-size: 30px;
   text-transform: capitalize;
+  margin: 0 10px;
 }
 .self-registration p{
   font-size: 17px;
-  line-height: 24px;
+  line-height: 2;
   font-weight: 600;
   color: rgba(130, 130, 130, 1);
   text-align: justify;
+}
+.self-registration img{
+  height: 50vh;
+  border-radius: 5px;
 }
 /* ****************************************** */
 .pre-registration{
@@ -77,13 +82,14 @@ animation: shake 150ms 2 linear;
 }
 .pre-registration p{
   font-size: 17px;
-  line-height: 24px;
+  line-height: 2;
   font-weight: 600;
   color: rgba(130, 130, 130, 1);
   text-align: justify;
 }
 .pre-registration img{
- 
+ height: 50vh;
+ border-radius: 5px;
 }
 
 /* ************************************ */
@@ -96,10 +102,10 @@ animation: shake 150ms 2 linear;
 }
 .systems-database  p{
   font-size: 17px;
-  line-height: 24px;
+  line-height: 2;
   font-weight: 600;
   color: rgba(130, 130, 130, 1);
-  text-align: justify;
+  text-align: left;
 }
 .systems-database img{
   border-radius: 25px;
@@ -114,7 +120,7 @@ animation: shake 150ms 2 linear;
 }
 .benefits  p{
   font-size: 17px;
-  line-height: 24px;
+  line-height: 2;
   font-weight: 600;
   color: rgba(130, 130, 130, 1);
   text-align: justify;
@@ -137,7 +143,7 @@ animation: shake 150ms 2 linear;
 }
 .event  p{
   font-size: 17px;
-  line-height: 24px;
+  line-height:2;
   font-weight: 600;
   color: rgba(130, 130, 130, 1);
   text-align: justify;

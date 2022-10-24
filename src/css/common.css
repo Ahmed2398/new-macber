@@ -504,18 +504,22 @@ Preloader
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
-  font-size: 28px;
-  border: none;
-  outline: none;
-  background-color: var(--primary-color2) !important;
-  color: white;
-  cursor: pointer;
-  /* padding:0 15px; */
-  border-radius: 8px;
-  transition: ease-in-out 1s;
-  width: 50px;
-  height: 50px;
+  
+  
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #45108A , #fff);
+    padding: 0.7em 1em;
+    border-radius: 1px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: white;
+  
 }
 
 
